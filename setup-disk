@@ -470,6 +470,7 @@ init_progs() {
 	ext*) fstools=e2fsprogs; mkfs_args="-q";;
 	xfs) fstools=xfsprogs; mkfs_args="-q";;
 	btrfs) fstools=btrs-progs; mkfs_args="";;
+	jfs) fstools=jfsutils; mkfs_args="-q";;
 	esac
 	apk add --quiet sfdisk gptfdisk e2fsprogs lvm2 $raidpkg syslinux $fstools $@
 }
